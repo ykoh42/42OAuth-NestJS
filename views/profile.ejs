@@ -1,0 +1,7 @@
+<%- include('./header.ejs') %>
+<p>ID: <%= user.id %></p>
+<p>Xlogin: <%= user.username %></p>
+<p>Name: <%= user.displayName %></p>
+<p>Emails: <%= user.emails[0].value %></p>
+<p>Phone: <%= user.phoneNumbers[0].value %><p>
+<%- include('./footer.ejs') %>
