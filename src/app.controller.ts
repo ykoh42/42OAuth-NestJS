@@ -1,5 +1,7 @@
 import { Controller, Get, Render } from '@nestjs/common';
 import { AppService } from './app.service';
+import { User } from './login/user.decorator';
+import { Profile } from 'passport-42';
 
 @Controller()
 export class AppController {
@@ -7,8 +9,8 @@ export class AppController {
 
   @Get()
   @Render('home')
-  home() {
-    return { user: undefined };
+  home(@User() user: Profile) {
+    return { user };
   }
 
   @Get('login')
