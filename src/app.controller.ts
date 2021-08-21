@@ -10,4 +10,10 @@ export class AppController {
   home() {
     return { user: undefined };
   }
+
+  @Get('login')
+  @Render('login')
+  login() {
+    return;
+  }
 }
