@@ -9,12 +9,10 @@ export class SessionSerializer extends PassportSerializer {
   }
 
   serializeUser(user: Profile, done: (err: Error, user: Profile) => void): any {
-    console.log('user: ', user);
     done(null, user);
   }
 
   deserializeUser(payload: Profile, done: (err: Error, user: Profile) => void) {
-    console.log('user: ', payload);
     return done(null, payload);
   }
 }
