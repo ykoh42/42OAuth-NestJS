@@ -1,0 +1,26 @@
+<%- include('./header.ejs') %>
+<table class="table">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>country</th>
+    <th>city</th>
+    <th>users_count</th>
+    <th>language</th>
+    <th>web</th>
+  </tr>
+  <% data.forEach((item, idx) => { %>
+  <tr>
+    <td><%= idx + 1 %></td>
+    <td><%= item.name %></td>
+    <td><%= item.country %></td>
+    <td><%= item.city %></td>
+    <td><%= item.users_count %></td>
+    <td><%= item.language.name %></td>
+    <td>
+      <a href="<%= item.website %>" target="_blank"><%= item.website %></a>
+    </td>
+  </tr>
+  <% }); %>
+</table>
+<%- include('./footer.ejs') %>
